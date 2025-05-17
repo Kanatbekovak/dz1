@@ -3,16 +3,15 @@
   padding: 0;
 }
 
-:root {
-  --font-family: "Inter", sans-serif;
-  --font-weight: 500;
+html {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
 }
 
 .header {
   width: 100%;
   max-width: 1520px;
   height: 65px;
-  background-color: #f30707;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,6 +23,7 @@
           justify-content: space-between;
   padding: 16px 24px;
   margin-inline: auto;
+  border-bottom: 1px solid #e5e9eb;
 }
 
 .logo {
@@ -32,7 +32,13 @@
   display: flex;
   gap: 10px;
 }
+.logo a {
+  text-decoration: none;
+}
 
+.nav {
+  margin-inline: 32px 655px;
+}
 .nav ol {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -41,11 +47,104 @@
       -ms-flex-align: center;
           align-items: center;
   list-style: none;
-  gap: 16px;
+  gap: 38px;
+}
+.nav ol button {
+  margin-left: 14px;
+  border-radius: 6px;
+  padding: 4px 12px;
+  width: 68px;
+  height: 32px;
+  background-color: #ffffff;
+  cursor: pointer;
+  border: 1px solid #dde2e4;
+}
+.nav ol a {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 171%;
+  letter-spacing: -0.01em;
+  color: #252c32;
 }
 
+.icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  gap: 12px;
+}
+.icons a {
+  text-decoration: none;
+}
+
+@media (min-width: 1920px) {
+  .burger_icon {
+    display: none;
+  }
+}
+@media (min-width: 1440px) {
+  .nav {
+    margin-inline: 32px 415px;
+  }
+}
+@media (max-width: 1280px) {
+  .nav {
+    margin-inline: 32px 255px;
+  }
+}
 @media (max-width: 960px) {
   .nav {
+    display: none;
+  }
+  .logo {
+    margin-right: 478px;
+  }
+}
+@media (min-width: 960px) {
+  .burger_icon {
+    display: none;
+  }
+}
+@media (max-width: 760px) {
+  .nav {
+    display: none;
+  }
+  .logo {
+    margin-right: 386px;
+  }
+  .mark__icon,
+  .settings__icon {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .nav {
+    display: none;
+  }
+  .logo {
+    margin-right: 225px;
+  }
+  .mark__icon,
+  .settings__icon,
+  .bell__icon {
+    display: none;
+  }
+}
+@media (max-width: 360px) {
+  .nav {
+    display: none;
+  }
+  .logo {
+    margin-right: 127px;
+  }
+  .mark__icon,
+  .settings__icon,
+  .bell__icon {
     display: none;
   }
 }
